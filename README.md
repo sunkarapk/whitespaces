@@ -4,7 +4,7 @@
 
 ## Installation
 ```
-npm install whitespaces
+npm install whitespaces -g
 ```
 
 ## Usage
