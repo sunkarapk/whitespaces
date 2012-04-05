@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var path = require('path')
+  , fs = require('fs')
+  , dir, paths = []
+  , argv = process.argv;
+
+if (argv[0] != 'node') {
+  throw new Error('y u no use node?');
+} else if(argv.length == 2) {
+  console.log('Usage: whitespaces [FILES]');
+} else {
+  dir = process.cwd();
+  for (var i=2; argv[i]; i++) {
+    paths.push(path.resolve(dir, argv[i]));
+  }
+
+  paths.forEach(function (file) {
+    fs.readFile(file, 'utf8', function (err, data) {
+      if (err) return console.log('Reading', file, err);
+      data = data.split("\n").map(function (line) {
+        if (/^\s*$/.test(line)) return '';
+        return line.replace(/\s*$/, '');
+      }).join("\n");
+      fs.writeFile(file, data, 'utf8', function (err, data) {
+        if (err) return console.log('Writing', file, err);
+      });
+    });
+  });
+}

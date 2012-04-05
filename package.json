@@ -1,0 +1,41 @@
+{
+  "name": "whitespaces",
+  "version": "0.1.0",
+  "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (http://pksunkara.github.com)",
+  "description": "Fix all the whitespaces",
+  "bin": "./whitespaces",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pksunkara/whitespaces.git"
+  },
+  "keywords": [
+    "whitespaces",
+    "fix"
+  ],
+  "homepage": "http://pksunkara.github.com/whitespaces",
+  "scripts": {
+    "test": "./node_modules/.bin/vows --spec $(find test -name '*.js')"
+  },
+  "contributors": [
+    {
+      "name": "Pavan Kumar Sunkara",
+      "email": "pavan.sss1991@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "engines": {
+    "node": ">0.4.11"
+  },
+  "bugs": {
+    "url": "https://github.com/pksunkara/whitespaces/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/pksunkara/whitespaces/raw/master/LICENSE"
+    }
+  ]
+}
