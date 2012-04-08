@@ -5,9 +5,7 @@ var path = require('path')
   , dir, paths = []
   , argv = process.argv;
 
-if (argv[0] != 'node') {
-  throw new Error('y u no use node?');
-} else if(argv.length == 2) {
+if(argv.length == 2) {
   console.log('Usage: whitespaces [FILES]');
 } else {
   dir = process.cwd();
