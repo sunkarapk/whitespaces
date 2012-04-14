@@ -16,6 +16,12 @@ whitespaces [FILES]
 * Fixes trailing whitespaces
 * Fixes whitespaces in blank lines
 
+```
+whitespaces -c [FILES]
+```
+
+Checks for whitespaces and exits with `1` if found.
+
 If you like this project, please watch this and follow me.
 
 ## Testing
