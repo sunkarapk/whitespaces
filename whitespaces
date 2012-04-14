@@ -6,8 +6,26 @@ var path = require('path')
   , argv = process.argv;
 
 if(argv.length == 2) {
-  console.log('Usage: whitespaces [FILES]');
-} else {
+  console.log('Usage: whitespaces [-c] [FILES]');
+} else if (argv.length > 3 && argv[2] === "-c") {
+  dir = process.cwd();
+  for (var i=3; argv[i]; i++) {
+    paths.push(path.resolve(dir, argv[i]));
+  }
+
+  paths.forEach(function (file) {
+    fs.readFile(file, 'utf8', function (err, data) {
+      if (err) return console.log('Reading', file, err);
+      data.split("\n").forEach(function (line) {
+        if (/\s+$/.test(line)) {
+          console.error("Whitespace found.");
+          process.exit(1);
+        }
+      });
+    });
+  });
+}
+else {
   dir = process.cwd();
   for (var i=2; argv[i]; i++) {
     paths.push(path.resolve(dir, argv[i]));
