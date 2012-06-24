@@ -15,6 +15,7 @@ whitespaces [FILES]
 
 * Fixes trailing whitespaces
 * Fixes whitespaces in blank lines
+* Make sure a blank character after comma
 
 ```
 whitespaces -c [FILES]

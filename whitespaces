@@ -38,6 +38,14 @@ else {
         if (/^\s*$/.test(line)) return '';
         return line.replace(/\s*$/, '');
       }).join("\n");
+
+      while (true) {
+        var match = data.match(/,([^\s])/);
+        if (match) {
+          data = data.replace(/,([^\s])/, ', '+match[1])
+        } else break;
+      }
+
       fs.writeFile(file, data, 'utf8', function (err, data) {
         if (err) return console.log('Writing', file, err);
       });
