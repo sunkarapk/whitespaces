@@ -6,7 +6,7 @@ var path = require('path')
   , argv = process.argv;
 
 if(argv.length == 2) {
-  console.log('Usage: whitespaces [-c] [FILES]');
+  console.log('Usage: whitespaces [-c|-o] [FILES]');
 } else if (argv.length > 3 && argv[2] === "-c") {
   dir = process.cwd();
   for (var i=3; argv[i]; i++) {
@@ -26,8 +26,10 @@ if(argv.length == 2) {
   });
 }
 else {
-  dir = process.cwd();
-  for (var i=2; argv[i]; i++) {
+  dir = process.cwd(); var j;
+  if (argv[2] == '-o') j=3
+  else j=2;
+  for (var i=j; argv[i]; i++) {
     paths.push(path.resolve(dir, argv[i]));
   }
 
@@ -39,11 +41,13 @@ else {
         return line.replace(/\s*$/, '');
       }).join("\n");
 
-      while (true) {
-        var match = data.match(/,([^\s])/);
-        if (match) {
-          data = data.replace(/,([^\s])/, ', '+match[1])
-        } else break;
+      if (argv[2] == '-o') {
+        while (true) {
+          var match = data.match(/,([^\s])/);
+          if (match) {
+            data = data.replace(/,([^\s])/, ', '+match[1])
+          } else break;
+        }
       }
 
       fs.writeFile(file, data, 'utf8', function (err, data) {
