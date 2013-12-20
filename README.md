@@ -12,33 +12,15 @@ go get github.com/pksunkara/whitespaces
 
 Or select one of the binaries below
 
-#### Darwin (Apple Mac)
-
- * [i386](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_darwin_386.zip?direct)
- * [amd64](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_darwin_amd64.zip?direct)
-
-#### FreeBSD
-
- * [i386](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_386.zip?direct)
- * [amd64](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_amd64.zip?direct)
- * [arm](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_arm.zip?direct)
-
-#### Linux
-
- * [i386.tar.gz](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_386.tar.gz?direct)
- * [amd64.tar.gz](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_amd64.tar.gz?direct)
- * [arm.tar.gz](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_arm.tar.gz?direct)
+ * Architecture i386 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_386.tar.gz?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_darwin_386.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_386.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_openbsd_386.zip?direct) ]
+ * Architecture amd64 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_amd64.tar.gz?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_darwin_amd64.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_amd64.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_openbsd_amd64.zip?direct) ]
+ * Architecture arm [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_linux_arm.tar.gz?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_freebsd_arm.zip?direct) ]
 
 You can install using deb files too.
 
+ * [i386.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_i386.deb?direct)
  * [amd64.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_amd64.deb?direct)
  * [armhf.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_armhf.deb?direct)
- * [i386.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_i386.deb?direct)
-
-#### OpenBSD
-
- * [i386](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_openbsd_386.zip?direct)
- * [amd64](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.0.0_openbsd_amd64.zip?direct)
 
 ## Usage
 
