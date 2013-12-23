@@ -7,7 +7,6 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"strings"
 )
 
 const (
@@ -47,7 +46,9 @@ func main() {
 		os.Exit(0)
 	}
 
-	whitespace := regexp.MustCompile("\\s+$")
+	whitespace := regexp.MustCompile("[\\t\\f ]+(\\r?(\\n))")
+
+	replace := []byte("$1")
 
 	for _, v := range args {
 
@@ -63,22 +64,15 @@ func main() {
 			data, err := ioutil.ReadFile(name)
 			handle(err)
 
-			lines := strings.Split(string(data), "\n")
-
-			for i, line := range lines {
-				if opts.Check {
-					if whitespace.FindStringIndex(line) != nil {
-						check(name, opts)
-						break
-					}
-				} else {
-					lines[i] = whitespace.ReplaceAllString(line, "")
+			if opts.Check {
+				if whitespace.FindIndex(data) != nil {
+					check(name, opts)
 				}
+			} else {
+				data = whitespace.ReplaceAll(data, replace)
 			}
 
 			if !opts.Check {
-				data := []byte(strings.Join(lines, "\n"))
-
 				ioutil.WriteFile(name, data, info.Mode())
 			}
 		}
