@@ -36,6 +36,7 @@ whitespaces FILES
 
 * Fixes trailing whitespaces
 * Fixes whitespaces in blank lines
+* Adds newline character at the end of file
 
 #### Check for whitespaces
 
