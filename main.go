@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"github.com/jessevdk/go-flags"
 	"io/ioutil"
@@ -48,6 +49,7 @@ func main() {
 
 	whitespace := regexp.MustCompile("[\\t\\f ]+(\\r?(\\n))")
 
+	newline := []byte("\n")
 	replace := []byte("$1")
 
 	for _, v := range args {
@@ -70,6 +72,10 @@ func main() {
 				}
 			} else {
 				data = whitespace.ReplaceAll(data, replace)
+			}
+
+			if !bytes.HasSuffix(data, newline) {
+				data = append(data, newline...)
 			}
 
 			if !opts.Check {
