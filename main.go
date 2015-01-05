@@ -62,26 +62,24 @@ func main() {
 
 		if info.IsDir() {
 			fmt.Println(name + " seems to be a directory. Skipping...")
-		} else {
-			data, err := ioutil.ReadFile(name)
-			handle(err)
-
-			if opts.Check {
-				if whitespace.FindIndex(data) != nil {
-					check(name, opts)
-				}
-			} else {
-				data = whitespace.ReplaceAll(data, replace)
-			}
-
-			if !bytes.HasSuffix(data, newline) {
-				data = append(data, newline...)
-			}
-
-			if !opts.Check {
-				ioutil.WriteFile(name, data, info.Mode())
-			}
+			continue
 		}
+
+		data, err := ioutil.ReadFile(name)
+		handle(err)
+
+		if opts.Check && whitespace.FindIndex(data) != nil {
+			check(name, opts)
+			continue
+		}
+
+		data = whitespace.ReplaceAll(data, replace)
+
+		if !bytes.HasSuffix(data, newline) {
+			data = append(data, newline...)
+		}
+
+		ioutil.WriteFile(name, data, info.Mode())
 	}
 }
 
