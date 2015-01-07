@@ -1,15 +1,12 @@
 VERSION = 1.1.1
 
-DEPS = \
-	github.com/jessevdk/go-flags
-
 all: deps install
 
 install:
 	go install -a github.com/pksunkara/whitespaces
 
 deps:
-	go get -u $(DEPS)
+	gpm
 
 goxc:
 	$(shell echo '{\n "ArtifactsDest": "build",\n "ConfigVersion": "0.9",' > $(GOXC_FILE))
