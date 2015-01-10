@@ -1,12 +1,16 @@
 VERSION = 1.1.1
 
+GPM = gpm
+GO_XC = goxc
+GOXC_FILE = .goxc.local.json
+
 all: deps install
 
 install:
 	go install -a github.com/pksunkara/whitespaces
 
 deps:
-	gpm
+	$(GPM)
 
 goxc:
 	$(shell echo '{\n "ArtifactsDest": "build",\n "ConfigVersion": "0.9",' > $(GOXC_FILE))
@@ -18,3 +22,6 @@ goxc:
 
 bintray:
 	$(GO_XC) bintray
+
+clean:
+	rm build debian .goxc.local.json
