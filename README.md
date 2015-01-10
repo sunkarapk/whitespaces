@@ -4,23 +4,21 @@ __Fix all the whitespaces!!__
 
 ## Installation
 
-You can install it using golang
+You can download the binaries
+
+ * Architecture i386 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_linux_386.tar.gz?direct) / [windows](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_windows_386.zip?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_darwin_386.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_freebsd_386.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_openbsd_386.zip?direct) / [netbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_netbsd_386.zip?direct) / [dragonfly](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_dragonfly_386.zip?direct) / [plan9](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_plan9_386.zip?direct) ]
+ * Architecture amd64 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_linux_amd64.tar.gz?direct) / [windows](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_windows_amd64.zip?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_darwin_amd64.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_freebsd_amd64.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_openbsd_amd64.zip?direct) / [netbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_netbsd_amd64.zip?direct) / [dragonfly](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_dragonfly_amd64.zip?direct) / [solaris](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_solaris_amd64.zip?direct) ]
+ * Architecture arm [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_linux_arm.tar.gz?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_freebsd_arm.zip?direct) / [netbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_netbsd_arm.zip?direct) ]
+
+Or by using deb packages
+
+[ [i386.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_i386.deb?direct) / [amd64.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_amd64.deb?direct) / [armhf.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.1_armhf.deb?direct) ]
+
+Or by using golang
 
 ```
 go get github.com/pksunkara/whitespaces
 ```
-
-Or select one of the binaries below
-
- * Architecture i386 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_linux_386.tar.gz?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_darwin_386.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_freebsd_386.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_openbsd_386.zip?direct) ]
- * Architecture amd64 [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_linux_amd64.tar.gz?direct) / [darwin](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_darwin_amd64.zip?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_freebsd_amd64.zip?direct) / [openbsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_openbsd_amd64.zip?direct) ]
- * Architecture arm [ [linux](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_linux_arm.tar.gz?direct) / [freebsd](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_freebsd_arm.zip?direct) ]
-
-You can install using deb files too.
-
- * [i386.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_i386.deb?direct)
- * [amd64.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_amd64.deb?direct)
- * [armhf.deb](https://dl.bintray.com//content/pksunkara/utils/whitespaces_1.1.0_armhf.deb?direct)
 
 ## Usage
 

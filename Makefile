@@ -24,4 +24,4 @@ bintray:
 	$(GO_XC) bintray
 
 clean:
-	rm build debian .goxc.local.json
+	rm -rf build debian .goxc.local.json
