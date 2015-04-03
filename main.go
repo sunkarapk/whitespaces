@@ -93,7 +93,17 @@ func check(name string, opts Options) {
 
 func handle(err error) {
 	if err != nil {
-		fmt.Println(err)
+
+		if _, ok := err.(*flags.Error); ok {
+			typ := err.(*flags.Error).Type
+
+			if typ != flags.ErrHelp {
+				fmt.Println(err)
+			}
+		} else {
+			fmt.Println(err)
+		}
+
 		os.Exit(0)
 	}
 }
